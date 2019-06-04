@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How To</title>
+    <link rel="stylesheet" type="text/css" href="aboutme.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <style>body {font-family: "Exo";} .navbutton{font-family:"Exo";} hr{height:2px;border-width:2px;background-color:lightgrey;}</style>
+</head>
+<body>
+    <script src="aboutme.js"></script>
+    <button class="navbutton" id="navbutton" onClick="navButtonClicked();">Pages<br>&#x25bc;</button>
+    <button class="navbutton" id="navbutton1" onClick="navTo('aboutme/aboutme-home.html');">About Me</button>
+    <button class="navbutton" id="navbutton2" onClick="navTo('aboutme/howto.html');">How To</button>
+    <button class="navbutton" id="navbutton3" onClick="navTo('aboutme/aboutme-checkpoints.html');">Checkpoints</button>
+    <div class="navbar">
+        <h1 class="center" id="navbar-title">How To<br><span id="navbar-title-line2">Henrik Evers</span></h1>
+    </div><br><br><br><br><br>
+    <div class="body">
+        <hr><h3 class="center">What did I create?</h3>
+        <p>
+            <span style="color:transparent;">YEEET</span>I created an HTML webpage that tells the user some facts about me, in addition to a summary of what I have learned in the Introduction to Programming class. The project uses coordinated HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JS (JavaScript) files to work.<hr>
+            <h3 class="center">How I Made It</h3>
+            <span style="color:transparent;">YEEET</span>To connect the CSS file to HTML, I used the following code: <code>&#x003c;link rel="stylesheet" type="text/css" href="aboutme.css"/></code> The `type` and `rel` attributes of the &#x003c;link&#x003e; tag tells HTML that the linked file is a CSS stylesheet. The `href` attribute points to the location of the file.
+            <br><span style="color:transparent;">YEEET</span>Conecting a JS file is a little different. for this, I used the following code inside of the &#x003c;head&#x003e; tag:<br><code>1: &#x003c;script src="aboutme.js"&#x003e;<br>2: /* The code */<br>3: &#x003c;/script&#x003e;</code>
+            <br>In Line 1, the `src` attribute points to the location of the JavaScript file. Line 2 represents where the code would go (the /* and */ are used to open and close comments in JS). From there, I could call a function present in `aboutme.js`. For example, the following picture shows the function navButtonClicked from aboutme.js:<br>
+            <img src="resources/pictures/navButtonClicked.png" width="100%" title="Click on the button in the top left of this page (the one that says pages) to see this is action!"/>
+            <br>Now, if I write <code>navButtonClicked();</code> in the &#x003c;script&#x003e; tag mentioned earlier, it would act as if the user clicked the `Pages` button when they load the page. You can see the function in action by pressing the button `Pages` button in the top left.
+        </p>
+        <p>
+            <h3 class="center">Navigation Buttons</h3>
+            <img src="resources/pictures/navButtonCSS.png" style="float:right;"/>
+            However, simply adding some JavaScript will not make our buttons look how we want them to (actually, it can using the JSDOM, but that isn't needed in these circumstances). To do that, the CSS on the right was added to `aboutme.css`. Some of the things, like height, width, background-color, and border-color attributes are pretty self explanatory. However, some of them are not that way.
+            <ul>
+                <li><code>position:fixed;</code> makes the element go wherever I tell it to, regardless of where it would normally go. The position never changes, even if you scroll. The two attributes below it, <code>top:0px;</code> and <code>left:0px;</code> tell the element to be zero pixels from the top and zero pixels from the left, placing it in the top left corner (where the navbuttons are).</li>
+                <li><code>border-radius:5px;</code> sets the radius of the curve in the corners to be 5 pixels. If you open the navbutton (navigation button) dropdown, you can see the curve at the bottom corners. This makes them softer and easier on the eyes than a sharp 90 degree angle in the corners.</li>
+                <li><code>transition-duration:0.4s;</code> makes the element take four tenths of a second to perform a transition. In the navButtonClicked function that was discussed above, this would mean it takes 0.4 seconds for the button to move to its new position.</li>
+                <li><code>z-index:10;</code> sets the z-index to 10. All elements have a default z-index of 0. When two elements overlap, the element with a higher z-index is shown. If you think of z-index as distance from sea level, and you are looking down from space, the higher object will be on top of the lower object. Therefore, an element with a z-index of 10 will shown over an element with a z-index of 0. I set the z-index to 10 to make sure it was above the other elements. Although I could have used a lower z-index, 10 makes it easy to expand the website in the future.</li>
+            </ul>
+            <h3 class="center">In-Text Images</h3>
+            <p>
+                <span style="color:transparent;">YEEET</span>The process of inserting images to be inline with the <img src="resources/pictures/text.png" style="height:25px; position:relative; top:5px;"/> is relatively simple.<br>
+                <img src="resources/pictures/howToLine44.png" style="width:100%;"/><br>
+                That picture represents the HTML for the line above it. Here is a version with the important parts:<br>
+                <img src="resources/pictures/howToLine44Big.png"/><br>
+                <ul>
+                    <li>The `src` attribute points the browser to the location of the image. This gives it something to display.</li>
+                    <li>Inside of the `style` attribute, I can put in-line CSS. This makes it easier to apply CSS to a single element than giving the element an ID and putting the style code in a linked CSS file. However, it can be harder to find the specific element, as you could search for the ID using ctrl+f.</li>
+                    <li>Finally, <code>position:relative;</code> and <code>top:5px;</code> move the image down five pixels, because otherwise it would stick out above the text and look ugly.</li>
+                </ul>
+            </p>
+        </p>
+    </div>
+</body>
+</html>

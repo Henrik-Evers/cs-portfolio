@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <script src="int2-checkpoints/processing.min.js"></script>
+    <title>Interactive Website</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onmousemove="showCoords(event)">
+    <canvas id="output-canvas" height='0px'></canvas>
+    <br><a>First Row and Column:</a>
+    <select id='first'>
+        <option>water</option>
+        <option>sand</option>
+    </select><br><br>
+    <a>Use potential random tile:</a>
+    <select id='random'>
+        <option>true (recommended)</option>
+        <option>false</option>
+    </select><br><br>
+    <a>Top and Left are Sand - Chance of Sand:<br></a>
+    <input id='tals' type='range' min='0' max='10' value='3'><a id='talsDisplay'>30%</a><br><br>
+    <a>Top and Left are Forest - Chance of Forest:<br></a>
+    <input id='talf' type='range' min='0' max='3' value='1'><a id='talfDisplay'>33%</a><br><br>
+    <a>Top or Left is Forest - Chance of Forest:<br></a>
+    <input id='tolf' type='range' min='0' max='5' value='1'><a id='tolfDisplay'>20%</a><br><br>
+    <a>Top and Left are Different & not Forest - Chance of Sand:<br></a>
+    <input id='tald' type='range' min='0' max='10' value='4'><a id='taldDisplay'>40%</a><br><br>
+    <button id='generate'>Generate!</button>
+    <button id='reset'>Reset</button><br><br><br>
+    <script src="interactive.js"></script>
+</body>
+</html>

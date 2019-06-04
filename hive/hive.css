@@ -1,0 +1,141 @@
+body {
+  background-image: url("https://c1.staticflickr.com/8/7332/9733719295_e4f3ed94b8_b.jpg");
+}
+code {
+  background-color:white;
+  color:black;
+}
+hr { 
+    height:2px;
+    border-width:2px;
+    background-color:lightgrey;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #00a1ff;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 90%;
+    height: 100px;
+    z-index:10;
+}
+.navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:30px;
+}
+.body {
+  width: 62%;
+  margin-left:19%;
+  background-color:rgba(35, 174, 255, 0.75);
+  padding:1%;
+}
+.center {
+    text-align:center;
+}
+.centered {
+  width: 50%;
+  margin-left:25%;
+  margin-right:25%;
+  background-color:rgba(35, 174, 255, 0.5);
+}
+#navbar-title {
+  position:relative;
+  top:-10px;
+  left:-5%;
+}
+#navbar-title-line2 {
+  font-style:italic;
+  font-weight:normal;
+  font-size:18px;
+  font-family:cursive;
+}
+.navbutton {
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100px;
+  width:10.2%;
+  border-radius:5px;
+  border-color:#23aeff;
+  background-color:#00a1ff;
+  transition-duration:0.4s;
+  font-size:20px;
+  z-index:10;
+}
+.navbutton:hover {
+  background-color:#3375e0;
+}
+#navbutton {
+  font-weight:bold;
+}
+#navbutton1 {
+  z-index:9;
+  top:0px;
+}
+#navbutton2 {
+  z-index:8;
+  top:0px;
+}
+#navbutton3 {
+  z-index:7;
+  top:0px;
+}
+.p-button {
+  width:200px;
+  height:50px;
+  border-radius:20px;
+}
+.no-background {
+  background-color:rgba(0,0,0,0);
+}
+.inTextImg {
+  height:35px;
+  position:relative;
+  top:10px;
+}
+.audioText {
+  position:relative;
+  top:-20px;
+  padding-left:15px;
+}
+.exampleTable {
+  border: 4px ridge white;
+}
+#exampleTable {
+  border-collapse:collapse;
+}
+#span-1 {
+  color:red;
+}
+#span-2 {
+  color:orange;
+}
+#span-3 {
+  color:yellow;
+}
+#span-4 {
+  color:green;
+}
+#span-5 {
+  color:teal;
+}
+#span-6 {
+  color:blue;
+}
+#span-7 {
+  color:indigo;
+}
+#span-8 {
+  color:purple;
+}
+#span-9 {
+  color:#bf8989;
+}
+#colourful {
+  background-color:#000000;
+}

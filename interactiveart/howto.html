@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Interactive Art - How To</title>
+    <link rel="stylesheet" type="text/css" href="interactiveart.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <style>body {font-family: "Exo";} .navbutton{font-family:"Exo";}</style>
+</head>
+<body onmousemove="showCoords(event)">
+    <script src="interactiveart.js"></script>
+    <button class="navbutton" id="navbutton" onClick="navButtonClicked();">Pages<br>&#x25bc;</button>
+    <button class="navbutton" id="navbutton1" onClick="navTo('interactiveart/howto.html');">Interactive Art - How To</button>
+    <button class="navbutton" id="navbutton2" onClick="navTo('interactive.html');">Interactive Art - Project</button>
+    <button class="navbutton" id="navbutton3" onClick="navTo('aboutme/aboutme-home.html');">Home</button>
+    <div class="navbar">
+        <h1 class="center" id="navbar-title">Interactive Art - How To<br><span id="navbar-title-line2">Henrik Evers</span></h1>
+    </div><br><br><br><br><br>
+    <div class="body">
+        <hr>
+        <h1>What I Created</h1>
+        <a><span style='color:transparent'>YEEET</span>I created a way to modify how a system I previously created procedurally generates 'islands' onto an 'ocean'.</a>
+        <hr>
+        <h1>How It Works</h1>
+        <a class='disclaimer'><span style='color:transparent'>YEEET</span>This How To page only explains setting the parameters and any modifications to the generator, and assumes you have read the How To for the generator. It can be found <span onclick="navTo('generativeart/howto.html');" style='color:blue;'><u>here</u></span>.</a>
+        <h2>Display</h2>
+        <a><span style='color:transparent'>YEEET</span>The first change is that the part of the generator that actually creates the map is wrapped up in a function called <code>everything();</code>. This makes it so that the generation can be run at will, instead of as soon as the page loads. This allows for parameters to be set before generation.</a>
+        <br><a><span style='color:transparent'>YEEET</span>Next, to be able to set the parameters, there are several <code>&#x3008;input&#x3009;</code> and <code>&#x3008;select&#x3009;</code> tags. Next to the sliders there is a changing value representing the percentage chance of the action stated above the slider. Because there are so many sliders, I used a simple system for naming them. If the top and left cells are sand, then it would be abbreviated to TALS, for (T)op (A)nd (L)eft (S)and. Then, using these assignments so I knew which was which, I created a setInterval that runs at 60 times per second, or every 1000/60 milliseconds.</a>
+        <img src='resources/setInterval.png' style='display:block; margin-left:auto; margin-right:auto;'>
+        <br><a><span style='color:transparent'>YEEET</span>The display for each value (the percentage number) is updated depending on the value of the slider. For example, <code>talsDisplay</code> is the percentage value next to the slider for Top and Left are Sand. The contents of it are being set to be equal to the value of the slider * 10, plus a percentage sign. This is because each increment from the slider equals a 10% higher chance in the generator. For TALF, however, each increment is 100%/3, or 33.33333%.</a>
+        <h2>Changed Generation</h2>
+        <a><span style='color:transparent'>YEEET</span>The previous generation algorithm had baked in generation chances, so I had to change it to use the value of the slider in its calculations. This is the original generator from TALF:</a><br>
+        <img src='resources/ogtalf.png' style='display:block; float:left;'><a><span style='color:transparent'>YEEET</span>It sets variable <code>x</code> to equal a random integer from 1 to 3 (inclusive) using my random function. Then, if <code>x == 2</code> is found to be true, the cell would be a forest. Otherwise, it would be sand. The new generator is quite different, as is needed.</a><br><br><br><br>
+        <img src='resources/newtalf.png' style='display:block; float:right;'>
+        <a><span style='color:transparent'>YEEET</span>First, it sets x to equal a random from 1 to 3, inclusive, similar to the first time. I used a ternary operator after so that if <code>x <= talf.value</code>, it sets x to true. Otherwise, x is unchanged. Then, in the switch statement, if <code>x == true</code>, then the block becomes forest. Otherwise, it is sand. So, if talf.value is 1 (the default), only x = 1 would make the pixel a forest. However, if talf.value is changed to 2, x = 2 would also make the pixel a forest.</a>
+        <hr>
+        <h1>How this Project Changed My Connection and Understanding of What it Means to Interact with Something</h1>
+        <a><span style='color:transparent'>YEEET</span>This project allowed me to learn how to use ternary operators, and made me more proficient in JS DOM, which I already had some experience in. I learned about the select tag, and more types that can be used for input tags.</a>
+        <hr>
+        <h1>What I Would Change if I Had More Time</h1>
+        <a><span style='color:transparent'>YEEET</span>If I had more time, I would have increased the amount of parameters that could be changed, and would have polished the generation so that it would produce more cohesive products.</a>
+        <hr>
+    </div>
+</body>
+</html>

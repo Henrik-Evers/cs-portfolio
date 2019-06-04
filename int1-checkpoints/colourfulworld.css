@@ -1,0 +1,18 @@
+/* The CSS source code for favthings.html*/
+body {
+    background-color:white;
+}
+h1 {
+    position:fixed; /*Makes it stay at the top (y-wise).*/
+    background-color:#4286f4;
+    margin-top:-8px; /*This looks weird, but is so that the top of the title is flush against the top.*/
+    text-align:center; /*To make it look good.*/
+    width:100%; /*So that the title stretches accross the entire screen.*/
+    z-index:1; /*The header was going behind the bottom set of images, so I changed this to keep it on top (z-wise).*/
+}
+h2 {
+    color:#6d6d6d;
+}
+p {
+    color:darkgrey;
+}

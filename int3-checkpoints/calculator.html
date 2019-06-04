@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+What I need for the calculator:
+- 10 numbers
+- Period and negative
+- Basic four operators
+- Some trig functions
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        .standardButtons {
+            height:50px;
+            width:73px;
+        }
+        .bottomButtons {
+            height:50px;
+            width:150px;
+        }
+        #display {
+            height:50px;
+            width:225px;
+        }
+    </style>
+</head>
+<body>
+    <input id='display' type='text' readonly='true'>
+    <button id='plus' class='standardButtons'>+</button><br>
+    <button id='num9' class='standardButtons'>9</button>
+    <button id='num8' class='standardButtons'>8</button>
+    <button id='num7' class='standardButtons'>7</button>
+    <button id='min' class='standardButtons'>-</button><br>
+    <button id='num6' class='standardButtons'>6</button>
+    <button id='num5' class='standardButtons'>5</button>
+    <button id='num4' class='standardButtons'>4</button>
+    <button id='div' class='standardButtons'>/</button><br>
+    <button id='num3' class='standardButtons'>3</button>
+    <button id='num2' class='standardButtons'>2</button>
+    <button id='num1' class='standardButtons'>1</button>
+    <button id='mul' class='standardButtons'>*</button><br>
+    <button id='num0' class='standardButtons'>0</button>
+    <button id='per' class='standardButtons'>.</button>
+    <button id='neg' class='standardButtons'>(-)</button>
+    <button id='equ' class='standardButtons'>=</button><br>
+    <button id='sin' class='standardButtons'>sin</button>
+    <button id='cos' class='standardButtons'>cos</button>
+    <button id='tan' class='standardButtons'>tan</button>
+    <button id='sqr' class='standardButtons'>x^2</button><br>
+    <button id='arcsin' class='standardButtons'>arcsin</button>
+    <button id='arccos' class='standardButtons'>arccos</button>
+    <button id='arctan' class='standardButtons'>arctan</button>
+    <button id='sqrt' class='standardButtons'>sqrt(x)</button><br>
+    <button id='clear' class='bottomButtons'>CLEAR ALL</button>
+    <button id='delete' class='bottomButtons'>DEL LAST</button>
+    <script src='calculator.js'></script>
+</body>
+</html>
